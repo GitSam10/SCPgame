@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>GreenFin External Consultants and Advisors</h1>
+    <h2>An external firm was hired to perform a study about common industry practices regarding sustainability. The summary findings are in the document below.</h2>
+    <div class="button-container">
+        <a href="{{ url_for('download_excel', file='Benchmarking and Best Practices') }}"><button>Download Data</button></a>
+        <a href="{{ url_for('greenfin') }}"><button>Go Back</button></a>
+    </div>
+{% endblock %}

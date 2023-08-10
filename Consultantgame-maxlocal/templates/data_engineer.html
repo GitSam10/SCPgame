@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Data Engineer Problem</h1>
+<p>As a Data Engineer at a major bank, your task is to design and implement a solution to handle real-time transaction data.
+
+The bank's current system is struggling with the high volume of transactions, leading to slow response times and dissatisfied customers. The new system should be able to process, store, and retrieve transaction data in real-time, serving thousands of customers concurrently. It should also account for future scalability as the bank continues to grow.
+
+The transaction data includes fields like transaction ID, account ID, transaction type (deposit, withdrawal, transfer, etc.), transaction amount, and timestamp.
+
+Here are your tasks:
+
+Propose a high-level architecture for the new system. What technologies would you use and why?
+
+
+How would you structure the data for efficient storage and retrieval? Discuss your choices of database(s), schemas, indexing, etc.
+
+
+How would you ensure data reliability and consistency in this high-traffic environment?
+
+
+Considering the sensitive nature of banking transactions, how would you ensure data security in your system?
+
+This problem requires a comprehensive understanding of data systems, data security, and system scalability. It should take approximately 15 minutes for an experienced data engineer to sketch out a high-level solution, though a detailed solution would take significantly longer.
+</p>
+
+<form action="{{ url_for('submit_data_engineer') }}" method="POST">
+    <textarea name="solution" id="solution" rows="10" cols="50"></textarea>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
+
+</body>
+</html>

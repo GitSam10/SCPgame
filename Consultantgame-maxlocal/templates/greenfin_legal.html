@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>GreenFin Legal department</h1>
+    <h2>We did some research and found three files regarding sustainability in our archive. Two files can be downloaded below, the other information that might be of interest can be found on <a href="https://sdgs.un.org/goals#icons">https://sdgs.un.org/goals#icons</a></h2>
+    <div class="button-container">
+        <div class="button-group">
+            <a href="{{ url_for('download_docx', file='SFDR_legal') }}"><button>Download Legal 1</button></a>
+            <a href="{{ url_for('download_docx', file='EU_regulation_2026') }}"><button>Download Legal 2</button></a>
+        </div>
+    </div>
+    <a href="{{ url_for('greenfin') }}"><button>Go Back</button></a>
+{% endblock %}

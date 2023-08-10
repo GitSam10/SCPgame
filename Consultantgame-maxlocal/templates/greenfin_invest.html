@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>GreenFin Finance and Risk</h1>
+    <h2>Here you have the past, current and future investment plans of GreenFin. We have also researched new products that were not available when we first created the investment strategy.</h2>
+    <div class="button-container">
+        <div class="button-group">
+        <a href="{{ url_for('download_excel', file='Investment_portfolio') }}"><button>Download Portfolio</button></a>
+        <a href="{{ url_for('download_excel', file='Financial Performance and Impact Analysis') }}"><button>Download Products</button></a>
+        </div>
+        <a href="{{ url_for('greenfin') }}"><button>Go Back</button></a>
+    </div>
+{% endblock %}

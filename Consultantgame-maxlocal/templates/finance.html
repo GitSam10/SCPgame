@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance path</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8f1;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .logo {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #001346;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 80px);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+            color: #ff4700;
+        }
+        h3 {
+            color: #ff4700;
+        }
+        button {
+            background-color: #001346;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            flex: 1;
+            width: 150px;
+        }
+        button:hover {
+            background-color: #001346;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="{{ url_for('static', filename='slp-logo-darkblue.png') }}" alt="Logo"> </div>
+    <div class="line"></div>
+    <div class="content">
+    <h1>Welcome to the Finance Path!</h1>
+    <div class="button-container">
+    <a href="{{ url_for('index') }}"><button>Go Back</button></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>GreenFin Customer Relationship Management</h1>
+    <h2>Among our customers we did a survey to obtain their preference for the different sustainability linked products.</h2>
+    <div class="button-container">
+        <a href="{{ url_for('download_excel', file='Customer Demographics and Preferences') }}"><button>Download Data</button></a>
+        <a href="{{ url_for('greenfin') }}"><button>Go Back</button></a>
+    </div>
+{% endblock %}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correct answer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        {% if current_question == 's1' %}
+            {% if answer_correct %}
+                Well done! 
+            {% else %}
+                Sorry that was not the correct answer.
+            {% endif %}
+                Option B is not correct. While it is common to have certain disclosure requirements (e.g., as is the case in option C), 
+                the approval process must always contain several parameters also on the financial health and liquidity of the company. Furthermore, 
+                ESG scores are typically only available for (very) large corporations. Requirements like this, 
+                will thus alter the banks client base and may lead to concentration risks. Furthermore, 
+                for financial institutions to make real impact on sustainability, it is key to engage with clients on sustainability targets. 
+                Granting credit to a client with a current bad sustainability score, under the condition of improvement of its sustainability score, 
+                is a good example to make real sustainability impact.
+        {% else %}
+        different question
+        {% endif %}
+    </h1>
+    <a href="{{ url_for('sustainability') }}"><button>Advance</button></a>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Screen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8f1;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .logo {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #001346;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 80px);
+        }
+        h1 {
+            margin-bottom: 30px;
+            color: #ff4700;
+        }
+        h2 {
+            text-align: center;
+        }
+        button {
+            background-color: #001346;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 150px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .submit-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="{{ url_for('static', filename='slp-logo-darkblue.png') }}" alt="Logo">
+     </div>
+    <div class="line"></div>
+    <div class="content">
+    <h1>Problem 2</h1>
+    <h2>You are a risk management consultant at a bank, and you are responsible for identifying and assessing the bank's exposure to sustainability risks arising from its lending activities. 
+        Which of the following would be an appropriate approach to assess the bank's exposure to sustainability risks?</h2>
+       
+    <form action="{{ url_for('check_input_s2') }}" method="POST">
+        <input type="radio" id="option_a" name="user_input" value="a">
+        <label for="option_a">a. Conducting a quantitative analysis to estimate the potential financial impact of various sustainability risks on the bank's loan portfolio.</label>
+        <br>
+        <input type="radio" id="option_b" name="user_input" value="b">
+        <label for="option_b">b. Reviewing the bank's internal policies and procedures to assess whether they are aligned with international sustainability standards.</label>
+        <br>
+        <input type="radio" id="option_c" name="user_input" value="c">
+        <label for="option_c">c. Engaging with industry experts and stakeholders to identify emerging sustainability risks that may impact the bank's lending activities.</label>
+        <br>
+        <div class="submit-button">
+        <button type="submit">Submit</button>
+    </div>
+    </form>
+    <a href="{{ url_for('sustainability') }}"><button>Go Back</button></a>
+</body>
+</html>

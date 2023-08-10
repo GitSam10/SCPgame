@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>GreenFin Human Resources</h1>
+    <h2>We did a survey on a small sample of all our employees to determine their sustainability knowledge and engagement.</h2>
+    <div class="button-container">
+        <a href="{{ url_for('download_excel', file='Employee Engagement and Training') }}"><button>Download Data</button></a>
+        <a href="{{ url_for('greenfin') }}"><button>Go Back</button></a>
+    </div>
+{% endblock %}

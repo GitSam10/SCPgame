@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>GreenFin Risk Management</h1>
+    <h2> info here.</h2>
+    <div class="button-container">
+        <a href="{{ url_for('download_excel', file='data_ceo') }}"><button>Download Data</button></a>
+        <a href="{{ url_for('greenfin') }}"><button>Go Back</button></a>
+    </div>
+{% endblock %}

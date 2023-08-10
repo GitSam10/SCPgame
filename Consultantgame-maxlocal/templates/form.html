@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Screen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8f1;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .logo {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #001346;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 80px);
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #ff4700;
+        }
+        button {
+            background-color: #001346;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="{{ url_for('static', filename='slp-logo-darkblue.png') }}" alt="Logo">
+    </div>
+    <div class="line"></div>
+    <div class="content">
+        <h1>Thank you for trying our consultant learning tool!</h1>
+        <h2>Please enter your (group) name</h2>
+        <form method="POST" action="{{ url_for('greet_user') }}">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

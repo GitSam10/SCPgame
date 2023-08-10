@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>GreenFin Communications and Marketing</h1>
+    <h2>We received the following input from all stakeholders after we held interviews.</h2>
+    <div class="button-container">
+        <a href="{{ url_for('download_excel', file='Stakeholder Communication and Perception') }}"><button>Download Data</button></a>
+        <a href="{{ url_for('greenfin') }}"><button>Go Back</button></a>
+    </div>
+{% endblock %}

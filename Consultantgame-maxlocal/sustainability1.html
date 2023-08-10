@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability problem 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center; /* Center align all text */
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Problem 1</h1>
+    <h2>You are hired via a large financial institution providing credits to Dutch corporations. 
+        The main objective of your assignment is to incorporate sustainability-risk considerations into the banks Credit Approval Process. 
+        One of your colleagues suggests incorporating the following requirements into the process. 
+        Although you like most of the recommendations, you disagree with one. Which one?</h2>
+    <form action="{{ url_for('check_input_s1') }}" method="POST">
+        <input type="radio" id="option_a" name="user_input" value="a">
+        <label for="option_a">a. For loan applications with an LTV of >50% laying at more than 1 meter under NAP, flooding assurance is a requirement for granting the loan.</label>
+        <br>
+        <input type="radio" id="option_b" name="user_input" value="b">
+        <label for="option_b">b. Only clients with an ESG score of >65% will be granted credit, regardless of any other criteria. This extreme measure is needed to prevent potential defaults in the long-term.</label>
+        <br>
+        <input type="radio" id="option_c" name="user_input" value="c">
+        <label for="option_c">c. For corporations with revenue exceeding 500 million, disclosures on their sustainability and climate risk mitigation strategy are required, else credit won’t be granted under any circumstances.</label>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{{ url_for('sustainability') }}"><button>Go Back</button></a>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability path</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8f1;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .logo {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #001346;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 80px);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+            color: #ff4700;
+        }
+        button {
+            background-color: #001346;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="{{ url_for('static', filename='slp-logo-darkblue.png') }}" alt="Logo"> </div>
+    <div class="line"></div>
+    <div class="content">
+    <h3>
+        {% if current_question == 's1' %}
+            {% if answer_correct %}
+                Well done! 
+            {% else %}
+                Sorry that was not the correct answer.
+            {% endif %}
+                Option B is not correct. While it is common to have certain disclosure requirements (e.g., as is the case in option C), 
+                the approval process must always contain several parameters also on the financial health and liquidity of the company. Furthermore, 
+                ESG scores are typically only available for (very) large corporations. Requirements like this, 
+                will thus alter the banks client base and may lead to concentration risks. Furthermore, 
+                for financial institutions to make real impact on sustainability, it is key to engage with clients on sustainability targets. 
+                Granting credit to a client with a current bad sustainability score, under the condition of improvement of its sustainability score, 
+                is a good example to make real sustainability impact.
+        {% elif current_question == 's2' %}
+            {% if answer_correct %}
+                Well done! 
+            {% else %}
+                Sorry that was not the correct answer.
+            {% endif %}
+            Option A is correct. Conducting a quantitative analysis to estimate the potential financial impact of various sustainability risks on the bank's loan portfolio. 
+            While reviewing internal policies and engaging with external stakeholders can also be valuable approaches to assessing sustainability risks, 
+            conducting a quantitative analysis is particularly useful in identifying and measuring the financial impact of sustainability risks on the bank's loan portfolio.
+        {% elif current_question == 's3' %}
+            {% if answer_correct %}
+                Well done! 
+            {% else %}
+                Sorry that was not the correct answer.
+            {% endif %}
+            The correct answer is D (dots B and D). 
+            It is understandable that this question is difficult to answer for candidates not knowing the exact demographics of the Netherlands, 
+            but it does highlight the granularity in data needs to properly assess climate change. While facility A lies in coastal areas, 
+            it is protected by natural dunes.
+            <img src="{{ url_for('static', filename='sustainability3_a.png') }}" alt="Image description" width="300">
+            {% endif %}
+    </h3>
+    <a href="{{ url_for('sustainability') }}"><button>Advance</button></a>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Crisis Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8f1;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .logo {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #001346;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 80px);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #ff4700;
+        }
+        h2 {
+  
+            margin-bottom: 20px;
+        }
+
+        h3 { 
+            font-size: small;
+        }
+        button {
+            background-color: #001346;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            flex: 1;
+            width: 150px;
+        }
+        button:hover {
+            background-color: #001346;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        
+        input[type="submit"] {
+            background-color: #001346;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 150px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #001346;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="{{ url_for('static', filename='slp-logo-darkblue.png') }}" alt="Logo">
+    </div>
+    <div class="line"></div>
+    <div class="content">
+        <h1>Welcome to your first case as a Solid consultant!</h1>
+        <h2>GreenFin Corporation is a significant player in the european banking sector. New regulations regarding sustainable growth and minimizing the environmental footprint of the firm have been announced. Greenfin developed a strategy to acchieve these goals, but major shareholders have expressed their concern that not enough is being done on the short term and are threatening to pull their investments out of the firm. They have demanded an emergency strategy meeting in 15 minutes where the CEO must present a plan to address the concerns and satisfy the shareholders. You and your team are hired as external consultants to create this plan. You need to interview different stakeholders to get all the data needed, have a clear overview and analysis of the current bank's activities, perform data-analysis and consider stakeholder management and reputation of the firm. The goal is to create a strategic plan built on data-analysis and stakeholder input in only 15 minutes. <br><br>
+            You have access to all employees in the organizational chart found below to retrieve the information you need.</h2>
+        <a href="{{ url_for('greenfin') }}"><button>GreenFin</button></a>
+        <a href="{{ url_for('index') }}"><button>Go Back</button></a>
+    </div>
+</body>
+</html>

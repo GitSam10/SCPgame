@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>GreenFin Operations and Technology</h1>
+    <h2>The internal departments usage of resources is found in the file below.</h2>
+    <div class="button-container">
+        <a href="{{ url_for('download_excel', file='Operational Efficiency and Resource Consumption') }}"><button>Download Data</button></a>
+        <a href="{{ url_for('greenfin') }}"><button>Go Back</button></a>
+    </div>
+{% endblock %}
